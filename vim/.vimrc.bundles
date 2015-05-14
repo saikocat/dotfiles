@@ -1,0 +1,33 @@
+" https://github.com/junegunn/vim-plug
+" $ vim -u $HOME/.vimrc.bundles +PlugInstall +PlugClean! +qa
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'bling/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/Align'
+Plug 'vim-scripts/tComment'
+
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'scrooloose/syntastic'
+Plug 'dag/vim2hs', { 'for': 'hs' }
+Plug 'repos-scala/scala-vundle', { 'for': 'scala' }
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'leshill/vim-json'
+Plug 'mxw/vim-jsx'
+
+Plug 'sickill/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/vim-tomorrow-theme'
+
+" local bundles
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+endif
+
+call plug#end()
