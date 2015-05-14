@@ -21,6 +21,7 @@
     untracked = cyan
 [alias]
     st = status
+    ca = commit --amend
     ci = commit
     br = branch
     co = checkout
@@ -41,6 +42,7 @@
     stat = status -sb
     last = log -1 --stat
     unstage = reset HEAD --
+    amend = commit --amend
 
     w = whatchanged
     # Search for a given string in all patches and print commit messages
