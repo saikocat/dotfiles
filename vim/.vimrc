@@ -190,17 +190,20 @@ hi clear SignColumn
 " In vim-airline, only display 'hunks' if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
 
-" ----- scrooloose/syntastic settings -----
+" - scrooloose/syntastic settings
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = '▲'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0 " Use :Errors instead
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-augroup mySyntastic
-    au!
-    au FileType tex let b:syntastic_mode = 'passive'
-augroup END
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [] }
+nnoremap <leader>st <Esc>:SyntasticToggleMode<CR>
+nnoremap <leader>sc <Esc>:SyntasticCheck<CR>
+nnoremap <leader>e <Esc>:Errors<CR>
 
 " - ctrlp settings
 let g:ctrlp_map = '<F2>'
