@@ -107,7 +107,7 @@ set showmatch
 
 " max column
 set textwidth=80
-set colorcolumn=+1
+set colorcolumn=81
 
 " display extra whitespace
 set list listchars=tab:»\ ,extends:›,precedes:‹,trail:·,eol:¬
