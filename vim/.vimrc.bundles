@@ -1,3 +1,5 @@
+" Patch fonts - https://github.com/powerline/fonts
+
 " https://github.com/junegunn/vim-plug
 " $ vim -u $HOME/.vimrc.bundles +PlugInstall +PlugClean! +qa
 call plug#begin('~/.vim/plugged')
