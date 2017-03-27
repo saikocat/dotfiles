@@ -14,13 +14,16 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/Align'
 Plug 'vim-scripts/tComment'
 Plug 'szw/vim-maximizer'
+Plug 'ramele/agrep'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/syntastic'
 Plug 'dag/vim2hs', { 'for': 'hs' }
-Plug 'repos-scala/scala-vundle', { 'for': 'scala' }
+" Plug 'repos-scala/scala-vundle', { 'for': 'scala' }
+" Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'ensime/ensime-vim', { 'for': ['scala', 'java'] }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'leshill/vim-json'
 Plug 'mxw/vim-jsx'
