@@ -148,6 +148,7 @@ augroup vimrcEx
     " JVM filetypes
     au BufWinEnter,BufNewFile,BufRead *.gradle set filetype=groovy
     au BufWinEnter,BufNewFile,BufRead *.sbt set filetype=scala
+    autocmd BufWritePost *.scala silent :EnTypeCheck
 augroup END
 
 
@@ -190,21 +191,6 @@ hi clear SignColumn
 " In vim-airline, only display 'hunks' if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
 
-" - scrooloose/syntastic settings
-let g:syntastic_error_symbol = '✘'
-let g:syntastic_warning_symbol = '▲'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0 " Use :Errors instead
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": [] }
-nnoremap <leader>st <Esc>:SyntasticToggleMode<CR>
-nnoremap <leader>sc <Esc>:SyntasticCheck<CR>
-nnoremap <leader>e <Esc>:Errors<CR>
-
 " - ctrlp settings
 let g:ctrlp_map = '<F2>'
 let g:ctrlp_use_caching = 1
@@ -213,8 +199,13 @@ let g:ctrlp_cache_dir = '~/.vim/.cache/ctrlp'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(class|exe|so|dll)$'
+  \ 'file': '\v\.(class|exe|so|dll|jar)$'
   \ }
+
+" - maximizer
+nnoremap <silent><F3> :MaximizerToggle<CR>
+vnoremap <silent><F3> :MaximizerToggle<CR>gv
+inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
