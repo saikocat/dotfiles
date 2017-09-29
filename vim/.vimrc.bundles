@@ -4,6 +4,10 @@
 " $ vim -u $HOME/.vimrc.bundles +PlugInstall +PlugClean! +qa
 call plug#begin('~/.vim/plugged')
 
+" Need Nerd fonts
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
@@ -28,6 +32,7 @@ Plug 'ensime/ensime-vim', { 'for': ['scala', 'java'] }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'mxw/vim-jsx', { 'for': 'jsx' }
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 " local bundles
 if filereadable(expand("~/.vimrc.bundles.local"))
