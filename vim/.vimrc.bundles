@@ -34,6 +34,9 @@ Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 
+Plug 'junegunn/limelight.vim'
+Plug 'reedes/vim-pencil'
+
 " local bundles
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
