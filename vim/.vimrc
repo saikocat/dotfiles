@@ -201,13 +201,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(class|exe|so|dll|jar)$'
   \ }
 
-" - vim-pencil
-augroup pencil
-  autocmd!
-  autocmd FileType markdown call pencil#init({'wrap': 'hard', 'autoformat': 1})
-  autocmd FileType text     call pencil#init({'wrap': 'hard', 'autoformat': 0})
-augroup END
-
 " - maximizer
 nnoremap <silent><F3> :MaximizerToggle<CR>
 vnoremap <silent><F3> :MaximizerToggle<CR>gv
