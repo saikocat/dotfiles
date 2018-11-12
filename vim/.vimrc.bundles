@@ -10,8 +10,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
@@ -19,13 +18,12 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/tComment'
 Plug 'szw/vim-maximizer'
-Plug 'ramele/agrep'
 
 Plug 'sickill/vim-monokai'
 Plug 'altercation/vim-colors-solarized'
 Plug 'chriskempson/vim-tomorrow-theme'
 
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'dag/vim2hs', { 'for': 'hs' }
@@ -35,7 +33,7 @@ Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 
-Plug 'junegunn/limelight.vim'
+" Plug 'junegunn/limelight.vim'
 
 " local bundles
 if filereadable(expand("~/.vimrc.bundles.local"))

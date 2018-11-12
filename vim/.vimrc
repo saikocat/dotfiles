@@ -176,13 +176,6 @@ vnoremap <tab> %
 " --- Bundles config
 noremap <F1> <CR>:NERDTreeToggle<CR>
 
-" - bling/vim-airline settings
-let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts = 1
-let g:airline_detect_paste = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-
 " - jistr/vim-nerdtree-tabs
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
@@ -192,8 +185,6 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 " - airblade/vim-gitgutter settings
 " Required after having changed the colorscheme
 hi clear SignColumn
-" In vim-airline, only display 'hunks' if the diff is non-zero
-let g:airline#extensions#hunks#non_zero_only = 1
 
 " - ctrlp settings
 let g:ctrlp_map = '<F2>'
