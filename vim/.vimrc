@@ -79,7 +79,9 @@ set splitbelow
 
 " no bells
 set noeb vb t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+augroup NoBells
+    autocmd GUIEnter * set visualbell t_vb=
+augroup END
 
 "Fix terminal timeout when pressing escape
 set ttimeoutlen=10
@@ -148,6 +150,9 @@ augroup vimrcEx
     au BufWinEnter,BufNewFile,BufRead *.gradle set filetype=groovy
     au BufWinEnter,BufNewFile,BufRead *.sbt set filetype=scala
     autocmd BufWritePost *.scala silent :EnTypeCheck
+
+    " Configuration
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
 
 
