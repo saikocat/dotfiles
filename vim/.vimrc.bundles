@@ -19,7 +19,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/tComment'
 Plug 'szw/vim-maximizer'
-Plug 'ramele/agrep'
 
 Plug 'sickill/vim-monokai'
 Plug 'altercation/vim-colors-solarized'
