@@ -153,6 +153,9 @@ augroup vimrcEx
 
     " Configuration
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+    " Java
+    autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup END
 
 
