@@ -91,12 +91,25 @@ augroup FastEscape
     au InsertLeave * set timeoutlen=1000
 augroup END
 
-
+" Looks and Appearance {{{
+" =============================================================================
 " --- Colorscheme ---
 set background=dark
 colorscheme monokai
 set gfn=Source\ Code\ Pro\ 9
 
+" Cursor Shape : _ for replace, | for insert, [] for visual {{{
+" fix cursor shape for tmux else it will just block
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+" }}}
 
 " --- Highlight ---
 " highlight the searchterms
@@ -117,6 +130,7 @@ highlight NonText guifg=#444444 guibg=bg ctermfg=DarkGray ctermbg=bg
 highlight SpecialKey guifg=#444444 guibg=bg ctermfg=DarkGray ctermbg=bg
 " highlight ColorColumn guibg=#232728
 
+" }}}
 
 " --- Per filetype configuration ---
 augroup vimrcEx
