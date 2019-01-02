@@ -42,6 +42,14 @@ Plug 'udalov/kotlin-vim', { 'for': ['kt', 'kts'] }
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'ensime/ensime-vim', { 'for': ['scala', 'java'] }
 
+Plug 'mbbill/undotree'     " Intelligent undo tree.
+" {{{
+  nnoremap <leader>u :UndotreeToggle<CR>
+  " layout - left undotree, bottom diff
+  let g:undotree_WindowLayout = 2
+" }}}
+"
+
 " Plug 'junegunn/limelight.vim'
 
 " local bundles
