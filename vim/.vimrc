@@ -123,6 +123,13 @@ set showmatch
 set textwidth=80
 set colorcolumn=81
 
+" Soft line break {{{
+" Make soft line breaks much better looking - if v:version > 703 endif
+set breakindent
+" Pretty soft break character.
+let &showbreak='↳ '
+" }}}
+
 " display extra whitespace
 set list listchars=tab:»\ ,extends:›,precedes:‹,trail:·,eol:¬
 
