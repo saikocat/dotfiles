@@ -210,17 +210,6 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 " Required after having changed the colorscheme
 hi clear SignColumn
 
-" - ctrlp settings
-let g:ctrlp_map = '<F2>'
-let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 1
-let g:ctrlp_cache_dir = '~/.vim/.cache/ctrlp'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(class|exe|so|dll|jar)$'
-  \ }
-
 " - maximizer
 nnoremap <silent><F3> :MaximizerToggle<CR>
 vnoremap <silent><F3> :MaximizerToggle<CR>gv
