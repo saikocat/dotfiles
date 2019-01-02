@@ -4,6 +4,18 @@
 " $ vim -u $HOME/.vimrc.bundles +PlugInstall +PlugClean! +qa
 call plug#begin('~/.vim/plugged')
 
+" Appearance & Looks
+" =============================================================================
+" Colorschemes
+Plug 'sickill/vim-monokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'sjl/badwolf'
+" {{{
+  " Make the gutters darker than the background.
+  let g:badwolf_darkgutter = 1
+" }}}
+
 " Need Nerd fonts
 Plug 'ryanoasis/vim-devicons'
 
@@ -17,10 +29,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/tComment'
 Plug 'szw/vim-maximizer'
-
-Plug 'sickill/vim-monokai'
-Plug 'altercation/vim-colors-solarized'
-Plug 'chriskempson/vim-tomorrow-theme'
 
 "Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'

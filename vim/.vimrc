@@ -93,10 +93,11 @@ augroup END
 
 " Looks and Appearance {{{
 " =============================================================================
-" --- Colorscheme ---
-set background=dark
+" Colorscheme & Font {{{
 colorscheme monokai
+set background=dark
 set gfn=Source\ Code\ Pro\ 9
+" }}}
 
 " Cursor Shape : _ for replace, | for insert, [] for visual {{{
 " fix cursor shape for tmux else it will just block
