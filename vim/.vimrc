@@ -223,3 +223,5 @@ inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 if filereadable($HOME . "/.vimrc.local")
     source ~/.vimrc.local
 endif
+
+" vim:sw=2:ts=2:et:foldenable:foldlevel=1:foldmethod=marker:

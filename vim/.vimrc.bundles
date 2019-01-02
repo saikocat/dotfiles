@@ -43,3 +43,5 @@ if filereadable(expand("~/.vimrc.bundles.local"))
 endif
 
 call plug#end()
+
+" vim:sw=2:ts=2:et:foldenable:foldlevel=0:foldmethod=marker:
