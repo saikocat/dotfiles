@@ -170,8 +170,6 @@ augroup vimrcEx
 
     " JVM filetypes
     au BufWinEnter,BufNewFile,BufRead *.gradle set filetype=groovy
-    au BufWinEnter,BufNewFile,BufRead *.sbt set filetype=scala
-    autocmd BufWritePost *.scala silent :EnTypeCheck
 
     " Configuration
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

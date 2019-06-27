@@ -50,7 +50,11 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 " }}}
 Plug 'udalov/kotlin-vim', { 'for': ['kt', 'kts'] }
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
-Plug 'ensime/ensime-vim', { 'for': ['scala', 'java'] }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+" {{{
+  au BufRead,BufNewFile *.sbt set filetype=scala
+" }}}
+" Plug 'ensime/ensime-vim', { 'for': ['scala', 'java'] }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 Plug 'mbbill/undotree'     " Intelligent undo tree.
