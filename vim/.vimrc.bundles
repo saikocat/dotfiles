@@ -35,7 +35,6 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'dag/vim2hs', { 'for': 'hs' }
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'leshill/vim-json', { 'for': 'json' }
 Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 " {{{
@@ -49,12 +48,9 @@ Plug 'fatih/vim-go', { 'for': 'go' }
   let g:go_highlight_generate_tags = 1
 " }}}
 Plug 'udalov/kotlin-vim', { 'for': ['kt', 'kts'] }
-Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 " {{{
   au BufRead,BufNewFile *.sbt set filetype=scala
 " }}}
-" Plug 'ensime/ensime-vim', { 'for': ['scala', 'java'] }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 Plug 'mbbill/undotree'     " Intelligent undo tree.
