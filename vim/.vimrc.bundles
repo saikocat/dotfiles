@@ -68,7 +68,7 @@ Plug 'mbbill/undotree'     " Intelligent undo tree.
 " LSP
 " CocInstall coc-git coc-lists coc-yaml coc-java
 " CocConfig - https://octetz.com/posts/vim-as-go-ide
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " {{{
   " if hidden is not set, TextEdit might fail.
   set hidden
