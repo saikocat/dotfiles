@@ -192,6 +192,9 @@ nnoremap <leader>v V`]
 " clear highlight with leader space
 nnoremap <leader><space> :noh<cr>
 
+" force redraw with <c-l>
+nnoremap <c-l> :redraw!<cr>
+
 " User tab for matching bracket
 nnoremap <tab> %
 vnoremap <tab> %
