@@ -48,6 +48,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
   let g:go_highlight_generate_tags = 1
 " }}}
 Plug 'udalov/kotlin-vim', { 'for': ['kt', 'kts'] }
+Plug 'derekwyatt/vim-scala', { 'for': ['scala', 'sbt'] }
 " {{{
   au BufRead,BufNewFile *.sbt set filetype=scala
 " }}}
