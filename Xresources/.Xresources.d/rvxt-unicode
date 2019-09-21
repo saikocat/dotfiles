@@ -6,7 +6,8 @@ URxvt.termName: rxvt-unicode-256color
 
 ! Fonts
 URxvt.letterSpace: -1
-URxvt.font: xft:SourceCodePro:size=10:hinting=true \
+URxvt*font: xft:SourceCodePro:size=10, \
+            xft:Hack:size=10, \
             xft:Monospace:size=10
 
 ! Extension
