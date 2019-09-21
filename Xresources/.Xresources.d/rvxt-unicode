@@ -1,0 +1,72 @@
+! xrdb -merge ~/.Xresources
+
+URxvt.depth: 32
+URxvt.saveLines: 2000
+URxvt.termName: rxvt-unicode-256color
+
+! Fonts
+URxvt.letterSpace: -1
+URxvt.font: xft:SourceCodePro:size=10:hinting=true \
+            xft:Monospace:size=10
+
+! Extension
+URxvt.perl-ext-common: default,clipboard,keyboard-select,tabbed
+
+! Tabbed
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 0
+URxvt.tabbed.tab-bg: 4
+
+! Keyboard-Select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+! Scrollbar
+URxvt.scrollStyle: plain
+URxvt.scrollBar: false
+
+! Bindings
+URxvt.iso14755   : false
+URxvt.iso14755_52: false
+
+URxvt.keysym.Shift-Control-v: eval:paste_clipboard
+URxvt.keysym.Shift-Control-c: eval:selection_to_clipboard
+
+! Colors
+URxvt.foreground: #f8f8f2
+URxvt.background: #282822
+URxvt.foreground_bold  : #f5f4f1
+URxvt.cursor           : #f5f4f1
+URxvt.cursor_foreground: #272822
+
+
+!! Black, Gray, Silver, White
+URxvt.color0 : #272822
+URxvt.color8 : #75715e
+URxvt.color7 : #f8f8f2
+URxvt.color15: #f9f8f5
+!! Red
+URxvt.color1 : #f92672
+URxvt.color9 : #f92672
+!! Green
+URxvt.color2 : #a6e22e
+URxvt.color10: #a6e22e
+!! Yellow
+URxvt.color3 : #f4bf75
+URxvt.color11: #f4bf75
+!! Blue
+URxvt.color4 : #66d9ef
+URxvt.color12: #66d9ef
+!! Purple
+URxvt.color5 : #ae81ff
+URxvt.color13: #ae81ff
+!! Teal
+URxvt.color6 : #a1efe4
+URxvt.color14: #a1efe4
+!! Extra colors
+URxvt.color16: #fd971f
+URxvt.color17: #cc6633
+URxvt.color18: #383830
+URxvt.color19: #49483e
+URxvt.color20: #a59f85
+URxvt.color21: #f5f4f1
