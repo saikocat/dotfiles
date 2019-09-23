@@ -31,10 +31,8 @@ URxvt.scrollBar: false
 URxvt.iso14755   : false
 URxvt.iso14755_52: false
 
-! URxvt.keysym.Shift-Control-v: eval:paste_clipboard
-! URxvt.keysym.Shift-Control-c: eval:selection_to_clipboard
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.Control-C: eval:selection_to_clipboard
+URxvt.keysym.Control-V: eval:paste_clipboard
 
 ! Colors
 URxvt.foreground: #f8f8f2
