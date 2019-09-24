@@ -17,13 +17,32 @@ URxvt.internalBorder: 0
 URxvt.borderLess: false
 
 ! Extension
-URxvt.perl-ext-common: default,clipboard,keyboard-select,tabbed
+URxvt.perl-ext-common: default,clipboard,keyboard-select,tabbedex
+
+! Tabbed Extension
+URxvt.tabbedex.no-tabbedex-keys: no
+URxvt.keysym.Shift-Left:    tabbedex:prev_tab
+URxvt.keysym.Shift-Right:   tabbedex:next_tab
+URxvt.keysym.Shift-Down:    tabbedex:new_tab
+URxvt.keysym.Shift-Up:      tabbedex:rename_tab
+URxvt.keysym.Control-Left:  tabbedex:move_tab_left
+URxvt.keysym.Control-Right: tabbedex:move_tab_right
+URxvt.keysym.Control-1:     tabbedex:goto_tab_1
+URxvt.keysym.Control-2:     tabbedex:goto_tab_2
+URxvt.keysym.Control-3:     tabbedex:goto_tab_3
+URxvt.keysym.Control-4:     tabbedex:goto_tab_4
+URxvt.keysym.Control-5:     tabbedex:goto_tab_5
+URxvt.keysym.Control-6:     tabbedex:goto_tab_6
+URxvt.keysym.Control-7:     tabbedex:goto_tab_7
+URxvt.keysym.Control-8:     tabbedex:goto_tab_8
+URxvt.keysym.Control-9:     tabbedex:goto_tab_9
+URxvt.keysym.Control-10:    tabbedex:goto_tab_10
 
 ! Tabbed
-URxvt.tabbed.tabbar-fg: 4
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg: 0
-URxvt.tabbed.tab-bg: 4
+! URxvt.tabbed.tabbar-fg: 4
+! URxvt.tabbed.tabbar-bg: 0
+! URxvt.tabbed.tab-fg: 0
+! URxvt.tabbed.tab-bg: 4
 
 ! Keyboard-Select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
