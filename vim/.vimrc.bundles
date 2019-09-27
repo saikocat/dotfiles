@@ -27,6 +27,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf.vim'
+" {{{
+  " Launch fzf with Ctrl-P in multiselect mode
+  nnoremap <silent> <C-p> :FZF -m<CR>
+  " other common things with fzf
+  " nnoremap <silent> <Leader><Enter> :Buffers<CR>
+  " nnoremap <silent> <Leader>l :Lines<CR>
+" }}}
 Plug 'vim-scripts/tComment'
 Plug 'szw/vim-maximizer'
 
