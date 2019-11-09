@@ -9,6 +9,7 @@ endif
 " --- Essential ---
 set encoding=utf-8
 
+set wrap
 set nopaste
 
 " Undo
@@ -121,7 +122,7 @@ set incsearch
 set showmatch
 
 " max column
-set textwidth=80
+" set textwidth=80
 set colorcolumn=81
 
 " Soft line break {{{
