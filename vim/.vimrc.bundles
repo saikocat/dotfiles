@@ -40,6 +40,11 @@ Plug 'szw/vim-maximizer'
 "Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'editorconfig/editorconfig-vim'
+" {{{
+  let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
+" }}}
+
 Plug 'dag/vim2hs', { 'for': 'hs' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'mxw/vim-jsx', { 'for': 'jsx' }
