@@ -37,6 +37,7 @@ set expandtab       " spaces instead of tabs
 set shiftwidth=4    " (Auto)indent uses 2 characters
 set softtabstop=4   " let backspace delete ident
 set tabstop=4       " Tabs are 2 characters
+set shiftround      " Shift to the next round tab stop
 
 set backspace=indent,eol,start
 
