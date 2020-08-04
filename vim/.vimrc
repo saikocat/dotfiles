@@ -123,7 +123,8 @@ set incsearch
 set showmatch
 
 " max column
-" set textwidth=80
+set textwidth=0
+set wrapmargin=0
 set colorcolumn=81
 
 " Soft line break {{{
@@ -155,13 +156,9 @@ augroup vimrcEx
         \ endif
 
     " Set syntax highlighting for specific file types
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
-
     " Enable spellchecking for Markdown
-    autocmd FileType markdown setlocal spell
-
     " Automatically wrap at 80 characters for Markdown
-    autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+    autocmd BufRead,BufNewFile *.md setlocal filetype=markdown spell textwidth=80 fo+=t
 
     " Automatically wrap at 72 characters and spell check git commit messages
     autocmd FileType gitcommit setlocal textwidth=72
