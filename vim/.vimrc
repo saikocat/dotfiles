@@ -96,7 +96,8 @@ augroup END
 " Looks and Appearance {{{
 " =============================================================================
 " Colorscheme & Font {{{
-colorscheme monokai
+" colorscheme monokai
+colorscheme srcery
 set background=dark
 set gfn=Source\ Code\ Pro\ 9
 " }}}
