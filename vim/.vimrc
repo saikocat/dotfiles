@@ -176,6 +176,9 @@ augroup vimrcEx
 
     " Java
     " autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+    " Go
+    autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 augroup END
 
 
