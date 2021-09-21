@@ -202,15 +202,6 @@ nnoremap <c-l> :redraw!<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" - airblade/vim-gitgutter settings
-" Required after having changed the colorscheme
-hi clear SignColumn
-
-" - maximizer
-nnoremap <silent><F3> :MaximizerToggle<CR>
-vnoremap <silent><F3> :MaximizerToggle<CR>gv
-inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
-
 " Local config
 if filereadable($HOME . "/.vimrc.local")
     source ~/.vimrc.local

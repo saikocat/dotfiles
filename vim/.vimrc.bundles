@@ -49,9 +49,19 @@ Plug 'junegunn/fzf.vim'
 " }}}
 Plug 'vim-scripts/tComment'
 Plug 'szw/vim-maximizer'
+" {{{
+" - maximizer
+nnoremap <silent><F3> :MaximizerToggle<CR>
+vnoremap <silent><F3> :MaximizerToggle<CR>gv
+inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
+" }}}
 
 "Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+" {{{
+" Required after having changed the colorscheme
+hi clear SignColumn
+" }}}
 
 Plug 'editorconfig/editorconfig-vim'
 " {{{
@@ -271,6 +281,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Resume latest coc list.
   nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " }}}
+" Tags & lsp
+" Plug 'liuchengxu/vista.vim'
 
 " Plug 'junegunn/limelight.vim'
 
