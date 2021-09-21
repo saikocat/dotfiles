@@ -20,6 +20,14 @@ Plug 'srcery-colors/srcery-vim'
 " Need Nerd fonts
 Plug 'ryanoasis/vim-devicons'
 
+" Search and replace
+Plug 'brooth/far.vim'
+" {{{
+let g:far#enable_undo=1
+
+set lazyredraw            " improve scrolling performance when navigating through large results
+" }}}
+
 Plug 'mhinz/vim-startify'
 "
 " Change to use coc-exlorer
