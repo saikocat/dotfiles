@@ -66,6 +66,7 @@ Plug 'derekwyatt/vim-scala', { 'for': ['scala', 'sbt'] }
   au BufRead,BufNewFile *.sbt set filetype=scala
 " }}}
 Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'mzlogin/vim-markdown-toc', { 'for': ['markdown', 'md'] }
 
 Plug 'mbbill/undotree'     " Intelligent undo tree.
 " {{{
