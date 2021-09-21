@@ -21,8 +21,20 @@ Plug 'srcery-colors/srcery-vim'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'mhinz/vim-startify'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+"
+" Change to use coc-exlorer
+" Plug 'scrooloose/nerdtree'
+" Plug 'jistr/vim-nerdtree-tabs'
+" {{{
+" noremap <F1> <CR>:NERDTreeToggle<CR>
+
+" - jistr/vim-nerdtree-tabs
+" Open/close NERDTree Tabs with \t
+" nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+" let g:nerdtree_tabs_open_on_console_startup = 0
+" let g:nerdtree_tabs_open_on_gui_startup = 0
+" }}}
+
 Plug 'itchyny/lightline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
@@ -76,7 +88,7 @@ Plug 'mbbill/undotree'     " Intelligent undo tree.
 " }}}
 
 " LSP
-" CocInstall coc-git coc-lists coc-yaml coc-java
+" CocInstall coc-git coc-explorer coc-lists coc-yaml coc-java
 " CocConfig - https://octetz.com/posts/vim-as-go-ide
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " {{{

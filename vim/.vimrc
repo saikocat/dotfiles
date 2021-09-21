@@ -202,15 +202,6 @@ nnoremap <c-l> :redraw!<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" --- Bundles config
-noremap <F1> <CR>:NERDTreeToggle<CR>
-
-" - jistr/vim-nerdtree-tabs
-" Open/close NERDTree Tabs with \t
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup = 0
-let g:nerdtree_tabs_open_on_gui_startup = 0
-
 " - airblade/vim-gitgutter settings
 " Required after having changed the colorscheme
 hi clear SignColumn
