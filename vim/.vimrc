@@ -202,6 +202,12 @@ nnoremap <c-l> :redraw!<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
+" remap to easily access cmd, double tap for ; func for f/F/t/T
+nnoremap ; :
+vnoremap ; :
+noremap ;; ;
+autocmd CmdLineEnter * set timeoutlen=175
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
     source ~/.vimrc.local
