@@ -66,9 +66,12 @@
     process = git-lfs filter-process
     required = true
 
+[core]
+    pager = delta
+
 [delta]
     features = side-by-side line-numbers decorations
-    syntax-theme = Dracula
+#    syntax-theme = Dracula
     plus-style = syntax "#003800"
     minus-style = syntax "#3f0001"
 
@@ -83,3 +86,12 @@
     line-numbers-right-style = cyan
     line-numbers-minus-style = 124
     line-numbers-plus-style = 28
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
