@@ -183,6 +183,8 @@ augroup END
 
 
 " --- Remapping ---
+let mapleader = ","
+
 " leader cd to change to current file dir
 map ,cd :cd %:p:h<CR>:pwd<CR>
 
