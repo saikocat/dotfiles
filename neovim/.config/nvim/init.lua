@@ -36,13 +36,18 @@ require('lazy').setup({
   { -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     lazy = false,
-    priority = 1000,
     config = function()
       require('onedark').setup { style = 'darker' } -- WTF!? opts={} doesn't work
-      vim.cmd.colorscheme 'onedark'
+      -- vim.cmd.colorscheme 'onedark'
     end,
   },
-  { 'srcery-colors/srcery-vim' },
+  {
+    priority = 1000,
+    'srcery-colors/srcery-vim',
+    config = function()
+      vim.cmd.colorscheme 'srcery'
+    end,
+  },
   { 'sickill/vim-monokai' },
 
   -- Git related plugins
@@ -199,7 +204,10 @@ require('telescope').setup {
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'java', 'scala', 'kotlin', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = {
+    'c', 'cpp', 'go', 'java', 'scala', 'kotlin', 'lua', 'python',
+    'rust', 'latex', 'tsx', 'typescript', 'vimdoc', 'vim'
+  },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = true,
