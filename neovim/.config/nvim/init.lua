@@ -44,8 +44,13 @@ require('lazy').setup({
   {
     priority = 1000,
     'srcery-colors/srcery-vim',
+  },
+  {
+    priority = 1000,
+    'ayu-theme/ayu-vim',
     config = function()
-      vim.cmd.colorscheme 'srcery'
+      vim.g['ayucolor'] = 'mirage'
+      vim.cmd.colorscheme 'ayu'
     end,
   },
   { 'sickill/vim-monokai' },
