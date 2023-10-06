@@ -40,12 +40,12 @@ function show_user -d "Show user"
   if [ "$USER" != "$default_user" -o -n "$SSH_CLIENT" ]
     set -l host (hostname -s)
     set -l who (whoami)
-    prompt_segment normal yellow " $who"
+    prompt_segment normal 5FD7FF " $who"
 
     # Skip @ bit if hostname == username
     if [ "$USER" != "$HOST" ]
-      prompt_segment normal white "@"
-      prompt_segment normal magenta "$host "
+      prompt_segment normal 8A8A8A "@"
+      prompt_segment normal FF5FD7 "$host "
       set pad ""
     end
     end
@@ -54,7 +54,7 @@ end
 # Show directory
 function show_pwd -d "Show the current directory"
   set -l pwd (prompt_pwd)
-  prompt_segment normal blue "$pad$pwd "
+  prompt_segment normal 8A8A8A "$pad$pwd "
 end
 
 # Show prompt w/ privilege cue
@@ -65,7 +65,7 @@ function show_prompt -d "Shows prompt with cue for current priv"
     set_color normal
     echo -n -s " "
   else
-    prompt_segment normal white " \$ "
+    prompt_segment normal 5FD7FF " \$ "
     end
 
   set_color normal
@@ -75,7 +75,7 @@ end
 function fish_prompt
   set -g RETVAL $status
   show_status
-  show_virtualenv
+  # show_virtualenv
   show_user
   show_pwd
   show_prompt
