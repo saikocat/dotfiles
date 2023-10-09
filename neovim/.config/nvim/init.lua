@@ -338,6 +338,9 @@ local servers = {
   gopls = {},
   pyright = {},
   rust_analyzer = {},
+  texlab = {},
+  sqlls = {},
+  marksman = {},
   -- tsserver = {},
 
   lua_ls = {
