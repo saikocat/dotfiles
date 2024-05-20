@@ -137,7 +137,7 @@ vim.o.sidescroll = 1
 
 -- Wild and file globbing stuff in command mode {{{
 
-vim.o.wildchar = '<Tab>'
+vim.o.wildchar = ('\t'):byte()
 vim.o.wildmenu = true
 vim.o.wildmode = 'longest:full,list,full' -- Shows a menu bar as opposed to an enormous list
 vim.o.wildignorecase = true -- Ignore case when completing file names and directories
@@ -206,7 +206,7 @@ vim.o.inccommand = 'split'
 vim.o.background = 'dark'
 vim.o.lazyredraw = true
 vim.o.termguicolors = true
-vim.o.t_Co = '256'
+-- vim.o.t_Co = '256'
 
 -- Set completeopt to have a better completion experience {{{
 
