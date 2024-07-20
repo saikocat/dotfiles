@@ -6,7 +6,7 @@ vim.g.maplocalleader = ' '
 
 -- copy/paste to system clipboard
 keymap.set({ 'n', 'v' }, '<Leader>y', '"+y', { desc = 'Yank to system clipboard' })
-keymap.set('n', '<Leader>d', '"+d', { desc = 'Cut to system clipboard' })
+-- keymap.set('n', '<Leader>d', '"+d', { desc = 'Cut to system clipboard' })
 keymap.set('n', '<Leader>p', '"+p', { desc = 'Put from system clipboard' })
 keymap.set('n', '<Leader>P', '"+P', { desc = 'Put from system clipboard' })
 

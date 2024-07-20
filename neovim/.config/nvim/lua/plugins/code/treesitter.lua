@@ -20,6 +20,7 @@ return {
         'javascript',
         'jq',
         'json',
+        'just',
         'kotlin',
         'html',
         'lua',
