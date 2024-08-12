@@ -35,8 +35,8 @@ return {
         { '<leader>s_', hidden = true },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>t_', hidden = true },
-        { '<leader>w', group = '[W]orkspace' },
-        { '<leader>w_', hidden = true },
+        { '<leader>W', group = '[W]orkspace' },
+        { '<leader>W_', hidden = true },
       }
     end,
   },

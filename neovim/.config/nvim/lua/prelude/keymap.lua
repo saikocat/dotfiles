@@ -11,10 +11,23 @@ keymap.set('n', '<Leader>p', '"+p', { desc = 'Put from system clipboard' })
 keymap.set('n', '<Leader>P', '"+P', { desc = 'Put from system clipboard' })
 
 -- window management
-keymap.set('n', '<Leader>sv', '<C-w>v', { desc = 'Split window vertically' })
-keymap.set('n', '<Leader>sh', '<C-w>s', { desc = 'Split window horizontally' })
-keymap.set('n', '<Leader>se', '<C-w>=', { desc = 'Make splits equal size' })
-keymap.set('n', '<Leader>sx', '<Cmd>close<CR>', { desc = 'Close current split' })
+keymap.set('n', '<Leader>wv', '<C-w>v', { desc = 'Split window vertically' })
+keymap.set('n', '<Leader>wh', '<C-w>s', { desc = 'Split window horizontally' })
+keymap.set('n', '<Leader>w|', '<C-w>|', { desc = 'Max out window width' })
+keymap.set('n', '<Leader>w_', '<C-w>_', { desc = 'Max out window height' })
+keymap.set('n', '<Leader>we', '<C-w>=', { desc = 'Make splits equal size' })
+keymap.set('n', '<Leader>ww', '<C-w>p', { desc = 'Go to other window' })
+keymap.set('n', '<Leader>wd', '<Cmd>close<CR>', { desc = 'Close current split' })
+
+-- tabs
+keymap.set('n', '<leader><tab>l', '<cmd>tablast<cr>', { desc = 'Last Tab' })
+keymap.set('n', '<leader><tab>f', '<cmd>tabfirst<cr>', { desc = 'First Tab' })
+keymap.set('n', '<leader><tab>]', '<cmd>tabnext<cr>', { desc = 'Next Tab' })
+keymap.set('n', '<leader><tab>[', '<cmd>tabprevious<cr>', { desc = 'Previous Tab' })
+keymap.set('n', '<leader><tab>n', '<cmd>tabnext<cr>', { desc = 'Next Tab' })
+keymap.set('n', '<leader><tab>p', '<cmd>tabprevious<cr>', { desc = 'Previous Tab' })
+keymap.set('n', '<leader><tab>d', '<cmd>tabclose<cr>', { desc = 'Close Tab' })
+keymap.set('n', '<leader><tab>c', '<cmd>tabnew<cr>', { desc = 'New Tab' })
 
 -- diagnostics
 -- <Cmd>lua vim.diagnostic.goto_next()<CR>
@@ -46,3 +59,14 @@ keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window'
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- Extra navigation preference
+-- Jump up and down the file keeping the cursor centered
+keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center the cursor after jumping down', noremap = true, silent = true })
+keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center the cursor after jumping up', noremap = true, silent = true })
+-- As you search keep the cursor in the center
+keymap.set('n', 'n', 'nzzzv', { desc = 'Search next and center', noremap = true, silent = true })
+keymap.set('n', 'N', 'Nzzzv', { desc = 'Search previous and center', noremap = true, silent = true })
+-- Yank to middle mouse
+keymap.set('x', '<leader>c', '"*y', { desc = 'Yank into middle mouse', noremap = true, silent = true })
+keymap.set('n', '<leader>v', '"*p', { desc = 'Paste from middle mouse', noremap = true, silent = true })
