@@ -3,6 +3,7 @@ return {
   'tpope/vim-sleuth',
 
   require 'plugins.code.treesitter',
+  require 'plugins.code.trouble',
   require 'plugins.code.comment',
   require 'plugins.code.conform',
   require 'plugins.code.lint',
