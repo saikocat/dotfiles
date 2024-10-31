@@ -26,6 +26,7 @@ return {
         'lua',
         'luadoc',
         'markdown',
+        'markdown_inline',
         'rust',
         'scala',
         'sql',

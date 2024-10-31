@@ -16,7 +16,7 @@ return {
       },
       {
         '<leader>cs',
-        '<cmd>Trouble symbols toggle focus=false<cr>',
+        '<cmd>Trouble symbols toggle focus=false win.position=right<cr>',
         desc = 'Symbols (Trouble)',
       },
       {
