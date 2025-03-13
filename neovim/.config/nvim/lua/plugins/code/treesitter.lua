@@ -13,20 +13,22 @@ return {
       ensure_installed = {
         'bash',
         'c',
+        'diff',
         'go',
         'gomod',
         'gotmpl',
+        'html',
         'java',
         'javascript',
         'jq',
         'json',
         'just',
         'kotlin',
-        'html',
         'lua',
         'luadoc',
         'markdown',
         'markdown_inline',
+        'query',
         'rust',
         'scala',
         'sql',
@@ -42,6 +44,8 @@ return {
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
+
+        disable = { 'just' },
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
