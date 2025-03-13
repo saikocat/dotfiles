@@ -1,5 +1,5 @@
 return {
-  { -- Autocompletion
+  { -- Autocompletion ||  magazine.nvim
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
@@ -33,10 +33,12 @@ return {
       --  nvim-cmp does not ship with all sources by default. They are split
       --  into multiple repos for maintenance purposes.
       'neovim/nvim-lspconfig',
+      'onsails/lspkind.nvim',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-nvim-lsp-signature-help',
     },
     config = function()
       -- See `:help cmp`
@@ -44,7 +46,50 @@ return {
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
+      local kind_icons = {
+        Text = '',
+        Method = '󰆧',
+        Function = '󰊕',
+        Constructor = '',
+        Field = '󰇽',
+        Variable = '󰂡',
+        Class = '󰠱',
+        Interface = '',
+        Module = '',
+        Property = '󰜢',
+        Unit = '',
+        Value = '󰎠',
+        Enum = '',
+        Keyword = '󰌋',
+        Snippet = '',
+        Color = '󰏘',
+        File = '󰈙',
+        Reference = '',
+        Folder = '󰉋',
+        EnumMember = '',
+        Constant = '󰏿',
+        Struct = '',
+        Event = '',
+        Operator = '󰆕',
+        TypeParameter = '󰅲',
+      }
+
       cmp.setup {
+        formatting = {
+          format = function(entry, vim_item)
+            -- Kind icons
+            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatenates the icons with the name of the item kind
+            -- Source
+            vim_item.menu = ({
+              buffer = '[Buffer]',
+              nvim_lsp = '[LSP]',
+              luasnip = '[LuaSnip]',
+              nvim_lua = '[Lua]',
+              latex_symbols = '[LaTeX]',
+            })[entry.source.name]
+            return vim_item
+          end,
+        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)

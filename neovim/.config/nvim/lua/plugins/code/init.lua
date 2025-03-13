@@ -8,4 +8,9 @@ return {
   require 'plugins.code.conform',
   require 'plugins.code.lint',
   -- require('plugins.code.autopairs'),
+
+  {
+    'NoahTheDuke/vim-just',
+    ft = { 'just' },
+  },
 }

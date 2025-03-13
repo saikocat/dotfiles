@@ -14,7 +14,7 @@ require('lazy').setup({
   require 'plugins.colors.ayu',
   require 'plugins.user_interface',
   require 'plugins.finder',
-  require 'plugins.completion',
+  require 'plugins.completion_blink',
   require 'plugins.git',
   require 'plugins.code',
   require 'plugins.lsp',
