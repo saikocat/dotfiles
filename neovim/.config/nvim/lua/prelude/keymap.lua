@@ -18,6 +18,7 @@ keymap.set('n', '<Leader>w_', '<C-w>_', { desc = 'Max out window height' })
 keymap.set('n', '<Leader>we', '<C-w>=', { desc = 'Make splits equal size' })
 keymap.set('n', '<Leader>ww', '<C-w>p', { desc = 'Go to other window' })
 keymap.set('n', '<Leader>wd', '<Cmd>close<CR>', { desc = 'Close current split' })
+keymap.set('n', '<Leader>wc', '<Cmd>close<CR>', { desc = 'Close current split' })
 
 -- tabs
 keymap.set('n', '<leader><tab>l', '<cmd>tablast<cr>', { desc = 'Last Tab' })
@@ -28,6 +29,8 @@ keymap.set('n', '<leader><tab>n', '<cmd>tabnext<cr>', { desc = 'Next Tab' })
 keymap.set('n', '<leader><tab>p', '<cmd>tabprevious<cr>', { desc = 'Previous Tab' })
 keymap.set('n', '<leader><tab>d', '<cmd>tabclose<cr>', { desc = 'Close Tab' })
 keymap.set('n', '<leader><tab>c', '<cmd>tabnew<cr>', { desc = 'New Tab' })
+keymap.set('n', '<leader><tab>s', '<cmd>tabedit %<cr>', { desc = 'Open Current Split in Tab' })
+keymap.set('n', '<leader>ts', '<cmd>tabedit %<cr>', { desc = 'Open Current Split in Tab' })
 
 -- diagnostics
 -- <Cmd>lua vim.diagnostic.goto_next()<CR>
