@@ -144,6 +144,10 @@ return {
             })
           end
 
+          if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_completion) then
+            vim.lsp.completion.enable(true, client.id, event.buf, { autotrigger = true })
+          end
+
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them
           --
