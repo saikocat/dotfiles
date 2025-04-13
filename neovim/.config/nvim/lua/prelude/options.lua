@@ -241,4 +241,6 @@ vim.o.diffopt = append({
 -- Show which line your cursor is on
 vim.o.cursorline = true
 
+vim.o.winborder = 'rounded'
+
 -- vim: ts=2 sts=2 sw=2 et foldenable foldlevel=1 foldmethod=marker
