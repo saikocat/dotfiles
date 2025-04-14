@@ -3,7 +3,12 @@ return {
     'saghen/blink.cmp',
     lazy = false, -- lazy loading handled internally
     -- optional: provides snippets for the snippet source
-    dependencies = 'rafamadriz/friendly-snippets',
+    dependencies = {
+      'rafamadriz/friendly-snippets',
+
+      -- Faster LuaLS setup
+      'folke/lazydev.nvim',
+    },
 
     -- use a release tag to download pre-built binaries
     -- version = '*',
@@ -53,7 +58,16 @@ return {
 
       -- elsewhere in your config, without redefining it, via `opts_extend`
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'cmdline' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'cmdline', 'lazydev' },
+        providers = {
+          lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+        },
+      },
+
+      completion = {
+        -- By default, you may press `<c-space>` to show the documentation.
+        -- Optionally, set `auto_show = true` to show the documentation after a delay.
+        documentation = { auto_show = false, auto_show_delay_ms = 500 },
       },
 
       -- Blink.cmp uses a Rust fuzzy matcher by default for typo resistance and significantly better performance
@@ -62,6 +76,9 @@ return {
       --
       -- See the fuzzy documentation for more information
       fuzzy = { implementation = 'prefer_rust_with_warning' },
+
+      -- Shows a signature help window while you type arguments for a function
+      signature = { enabled = true },
     },
 
     opts_extend = { 'sources.default' },

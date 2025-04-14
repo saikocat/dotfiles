@@ -39,6 +39,9 @@ return {
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp-signature-help',
+
+      -- Faster LuaLS setup
+      'folke/lazydev.nvim',
     },
     config = function()
       -- See `:help cmp`
