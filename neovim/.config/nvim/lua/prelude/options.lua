@@ -210,7 +210,7 @@ vim.o.termguicolors = true
 
 -- Set completeopt to have a better completion experience {{{
 
-vim.o.completeopt = append { 'menuone', 'noinsert', 'noselect' }
+vim.o.completeopt = append { 'menuone', 'noinsert', 'noselect', 'popup', 'fuzzy' }
 
 -- }}}
 
