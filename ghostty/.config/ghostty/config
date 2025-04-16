@@ -1,0 +1,13 @@
+command = fish --login --interactive
+
+shell-integration = fish
+
+theme = 0x96f
+
+font-family  = "TX-02 Regular"
+font-size    = 12
+font-feature = -calt, -liga, -dlig
+font-thicken = true
+
+# MacOS ONLY
+config-file = ?~/.config/ghostty/config_macos
