@@ -73,3 +73,8 @@ keymap.set('n', 'N', 'Nzzzv', { desc = 'Search previous and center', noremap = t
 -- Yank to middle mouse
 keymap.set('x', '<leader>c', '"*y', { desc = 'Yank into middle mouse', noremap = true, silent = true })
 keymap.set('n', '<leader>v', '"*p', { desc = 'Paste from middle mouse', noremap = true, silent = true })
+
+-- Buffer navigation
+keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = '[B]uffer [N]ext' })
+keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = '[B]uffer [P]revious' })
+keymap.set('n', '<leader>bl', ':buffers<CR>', { desc = '[B]uffer [L]ist' })
