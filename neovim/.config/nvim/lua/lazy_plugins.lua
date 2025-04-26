@@ -16,6 +16,7 @@ require('lazy').setup({
   require 'plugins.finder',
   require 'plugins.completion_blink',
   require 'plugins.git',
+  require 'plugins.diffview',
   require 'plugins.code',
   require 'plugins.lsp',
 
