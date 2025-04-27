@@ -27,20 +27,15 @@ return {
   opts = {
     options = {
       icons_enabled = true,
-      theme = 'ayu',
+      theme = 'auto',
     },
     sections = {
-      lualine_c = {
-        {
-          'filename',
-          path = 3,
-        },
-      },
-      lualine_y = {
-        function()
-          return progress_as_scrollbar()
-        end,
-      },
+      lualine_a = { 'mode' },
+      lualine_b = { 'branch', 'diff', 'diagnostics' },
+      lualine_c = { { 'filename', path = 3 } },
+      lualine_x = { 'encoding', 'fileformat', 'filetype' },
+      lualine_y = { 'searchcount', 'selectioncount', 'progress' },
+      lualine_z = { 'location' },
     },
     inactive_sections = {
       lualine_c = {
@@ -50,5 +45,22 @@ return {
         },
       },
     },
+    tabline = {
+      lualine_a = {
+        {
+          'tabs',
+          max_length = vim.o.columns / 3,
+          mode = 1,
+          path = 0,
+          symbols = { modified = '●' },
+        },
+      },
+      lualine_b = {},
+      lualine_c = {},
+      lualine_x = {},
+      lualine_y = {},
+      lualine_z = { { 'tabs', symbols = { modified = '●' } } },
+    },
+    -- winbar = {},
   },
 }
