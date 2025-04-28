@@ -28,6 +28,7 @@ return {
     options = {
       icons_enabled = true,
       theme = 'auto',
+      always_show_tabline = false,
     },
     sections = {
       lualine_a = { 'mode' },
