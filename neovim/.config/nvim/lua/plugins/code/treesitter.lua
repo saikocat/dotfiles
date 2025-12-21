@@ -1,19 +1,59 @@
+-- Treesitter textobjects dependency is a local plugin but proxied to nvim-treesitter-textobjects
+-- this is to improve readibility iin the treesitter dependencies.
+--
+-- Additional Refs:
+--   * https://github.com/ThorstenRhau/neovim/blob/main/lua/optional/treesitter.lua
+
 return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
+      {
+        'nvim-treesitter/nvim-treesitter-context',
+        opts = {
+          max_lines = 4,
+          multiline_threshold = 2,
+        },
+      },
+      {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        branch = 'main',
+        init = function()
+          -- Disable entire built-in ftplugin mappings to avoid conflicts.
+          -- See https://github.com/neovim/neovim/tree/master/runtime/ftplugin for built-in ftplugins.
+          vim.g.no_plugin_maps = true
+
+          -- Or, disable per filetype (add as you like)
+          -- vim.g.no_python_maps = true
+          -- vim.g.no_ruby_maps = true
+          -- vim.g.no_rust_maps = true
+          -- vim.g.no_go_maps = true
+        end,
+        config = function()
+          require('plugins.code.treesitter_textobjects_keymaps').setup()
+        end,
+      },
     },
     event = {
       'BufReadPre',
       'BufNewFile',
     },
+    branch = 'main',
+    lazy = false,
     build = ':TSUpdate',
-    opts = {
-      ensure_installed = {
+    config = function()
+      local ts = require 'nvim-treesitter'
+      ts.install({
         'bash',
         'c',
+        'comment',
+        'cmake',
         'diff',
+        'dockerfile',
+        'git_config',
+        'git_rebase',
+        'gitcommit',
+        'gitignore',
         'go',
         'gomod',
         'gotmpl',
@@ -24,54 +64,58 @@ return {
         'json',
         'just',
         'kotlin',
+        'latex',
         'lua',
         'luadoc',
         'markdown',
         'markdown_inline',
+        'python',
         'query',
+        'regex',
         'rust',
         'scala',
         'sql',
         'terraform',
+        'toml',
         'vim',
         'vimdoc',
-      },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = {
-        enable = true,
-        -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-        --  If you are experiencing weird indenting issues, add the language to
-        --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
+      }, {
+        max_jobs = 8,
+      })
 
-        disable = { 'just' },
-      },
-      indent = { enable = true, disable = { 'ruby' } },
-    },
-    config = function(_, opts)
-      -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+      local group = vim.api.nvim_create_augroup('TreesitterSetup', { clear = true })
 
-      -- Prefer git instead of curl in order to improve connectivity in some environments
-      require('nvim-treesitter.install').prefer_git = true
-      ---@diagnostic disable-next-line: missing-fields
-      require('nvim-treesitter.configs').setup(opts)
+      local ignore_filetypes = {
+        'checkhealth',
+        'lazy',
+        'mason',
+        'snacks_dashboard',
+        'snacks_notif',
+        'snacks_win',
+      }
 
-      -- There are additional nvim-treesitter modules that you can use to interact
-      -- with nvim-treesitter. You should go explore a few and see what interests you:
-      --
-      --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-      --    incremental_selection = {
-      --      enable = true,
-      --      keymaps = {
-      --        init_selection = "gnn",
-      --        node_incremental = "grn",
-      --        scope_incremental = "grc",
-      --        node_decremental = "grm",
-      --      },
-      --    },
-      --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-      --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+      -- Auto-install parsers and enable highlighting on FileType
+      vim.api.nvim_create_autocmd('FileType', {
+        group = group,
+        desc = 'Enable treesitter highlighting and indentation',
+        callback = function(event)
+          if vim.tbl_contains(ignore_filetypes, event.match) then
+            return
+          end
+
+          local lang = vim.treesitter.language.get_lang(event.match) or event.match
+          local buf = event.buf
+
+          -- Start highlighting immediately (works if parser exists)
+          pcall(vim.treesitter.start, buf, lang)
+
+          -- Enable treesitter indentation
+          vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+          -- Install missing parsers (async, no-op if already installed)
+          ts.install { lang }
+        end,
+      })
     end,
   },
 }
