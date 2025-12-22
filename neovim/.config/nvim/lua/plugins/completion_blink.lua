@@ -29,21 +29,22 @@ return {
       --
       -- See the full "keymap" documentation for information on defining your own keymap.
       --
-      keymap = { preset = 'default' },
-      -- keymap = {
-      --    ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-      --    ['<C-e>'] = { 'hide' },
-      --    ['<C-y>'] = { 'select_and_accept' },
+      keymap = {
+        preset = 'default',
 
-      --    ['<C-p>'] = { 'select_prev', 'fallback' },
-      --    ['<C-n>'] = { 'select_next', 'fallback' },
+        -- ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        -- ['<C-e>'] = { 'hide' },
+        -- ['<C-y>'] = { 'select_and_accept' },
 
-      --    ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
-      --    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+        -- ['<C-p>'] = { 'select_prev', 'fallback' },
+        -- ['<C-n>'] = { 'select_next', 'fallback' },
 
-      --    ['<Tab>'] = { 'snippet_forward', 'fallback' },
-      --    ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
-      --  },
+        -- ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+        -- ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+
+        -- ['<Tab>'] = { 'snippet_forward', 'fallback' },
+        -- ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+      },
       appearance = {
         -- highlight_ns = vim.api.nvim_create_namespace 'blink_cmp',
         -- kind_icons = {},
@@ -67,7 +68,7 @@ return {
       completion = {
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
-        documentation = { auto_show = false, auto_show_delay_ms = 500 },
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
       },
 
       -- Blink.cmp uses a Rust fuzzy matcher by default for typo resistance and significantly better performance
