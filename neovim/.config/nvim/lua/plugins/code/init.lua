@@ -1,6 +1,5 @@
 return {
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   require 'plugins.code.treesitter',
   require 'plugins.code.trouble',
