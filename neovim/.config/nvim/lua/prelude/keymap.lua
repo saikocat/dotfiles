@@ -34,8 +34,8 @@ keymap.set('n', '<leader>ts', '<cmd>tabedit %<cr>', { desc = 'Open Current Split
 
 -- diagnostics
 -- <Cmd>lua vim.diagnostic.goto_next()<CR>
-keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
-keymap.set('n', '<Leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, { desc = 'Go to [N]ext diagnostic' })
+keymap.set('n', '<Leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to [P]revious diagnostic' })
 keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
