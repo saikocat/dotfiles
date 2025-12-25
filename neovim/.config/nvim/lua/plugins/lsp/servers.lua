@@ -9,9 +9,30 @@
 --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 return {
   bashls = {},
+  bzl = {
+    filetypes = { 'bzl', 'bazel' },
+  },
   clangd = {},
   dockerls = {},
-  gopls = {},
+  gopls = {
+    directoryFilters = {
+      '-.git',
+      '-.idea',
+      '-.vscode',
+      '-.vscode-test',
+      '-**/vendor',
+      '-**/bazel-bin',
+      '-**/bazel-out',
+      '-**/bazel-testlogs',
+      '-**/node_modules',
+    },
+    analyses = {
+      unusedparams = true,
+    },
+    staticcheck = true,
+    gofumpt = true,
+    usePlaceholders = true,
+  },
   jsonls = {},
   marksman = {},
   pyright = {},
