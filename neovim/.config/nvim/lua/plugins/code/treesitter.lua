@@ -87,7 +87,10 @@ return {
 
       local ignore_filetypes = {
         'checkhealth',
+        'blink-cmp-menu',
         'lazy',
+        'lazy_backdrop',
+        'fidget',
         'mason',
         'snacks_dashboard',
         'snacks_notif',
