@@ -1,6 +1,10 @@
 -- Treesitter textobjects dependency is a local plugin but proxied to nvim-treesitter-textobjects
 -- this is to improve readibility iin the treesitter dependencies.
 --
+-- To recompile everything, delete all from these 2 directories:
+--   * ~/.local/share/nvim/site/parser/
+--   * ~/.local/share/nvim/site/queries/
+--
 -- Additional Refs:
 --   * https://github.com/ThorstenRhau/neovim/blob/main/lua/optional/treesitter.lua
 
