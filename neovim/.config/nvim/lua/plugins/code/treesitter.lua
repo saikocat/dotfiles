@@ -97,6 +97,7 @@ return {
         'lazy_backdrop',
         'fidget',
         'mason',
+        'mason_backdrop',
         'snacks_dashboard',
         'snacks_notif',
         'snacks_win',
