@@ -9,5 +9,7 @@ font-size    = 12
 font-feature = -calt, -liga, -dlig
 font-thicken = true
 
+clipboard-trim-trailing-spaces = true
+
 # MacOS ONLY
 config-file = ?~/.config/ghostty/config_macos
