@@ -20,6 +20,7 @@ require('lazy').setup({
   require 'plugins.code',
   require 'plugins.lsp',
   require 'plugins.mini',
+  require 'plugins.nix',
 
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
