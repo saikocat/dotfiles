@@ -6,6 +6,7 @@ return {
   require 'plugins.code.comment',
   require 'plugins.code.conform',
   require 'plugins.code.lint',
+  require 'plugins.code.markdown',
   -- require('plugins.code.autopairs'),
 
   {
