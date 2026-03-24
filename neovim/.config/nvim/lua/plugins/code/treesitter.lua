@@ -101,6 +101,7 @@ return {
         'fidget',
         'mason',
         'mason_backdrop',
+        'neo-tree',
         'snacks_dashboard',
         'snacks_notif',
         'snacks_win',
