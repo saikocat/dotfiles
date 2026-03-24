@@ -5,6 +5,8 @@
 --   * ~/.local/share/nvim/site/parser/
 --   * ~/.local/share/nvim/site/queries/
 --
+-- To add initial json cfg: tree-sitter init-config
+--
 -- Additional Refs:
 --   * https://github.com/ThorstenRhau/neovim/blob/main/lua/optional/treesitter.lua
 
@@ -82,6 +84,7 @@ return {
         'sql',
         'terraform',
         'toml',
+        'typescript',
         'vim',
         'vimdoc',
       }, {
