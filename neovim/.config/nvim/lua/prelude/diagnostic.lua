@@ -20,11 +20,17 @@ vim.diagnostic.config {
     priority = 9999,
     text = sign_text,
   },
-  virtual_text = {
-    source = 'if_many',
-    spacing = 2,
-    format = function(diagnostic)
-      return diagnostic.message
-    end,
-  },
+  virtual_text = function(_, bufnr)
+    if vim.b[bufnr].diagnostic_virtual_text == false then
+      return false
+    end
+
+    return {
+      source = 'if_many',
+      spacing = 2,
+      format = function(diagnostic)
+        return diagnostic.message
+      end,
+    }
+  end,
 }
