@@ -43,3 +43,10 @@ keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, { desc = 'Go to [N]ext d
 keymap.set('n', '<Leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to [P]revious diagnostic' })
 keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+keymap.set('n', '<leader>dt', function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  vim.b[bufnr].diagnostic_virtual_text = vim.b[bufnr].diagnostic_virtual_text == false
+
+  vim.diagnostic.hide(nil, bufnr)
+  vim.diagnostic.show(nil, bufnr)
+end, { desc = '[T]oggle Diagnostic Virtual Text (Buffer)' })
