@@ -38,9 +38,12 @@ vim.diagnostic.config {
 local keymap = vim.keymap
 
 -- diagnostics
--- <Cmd>lua vim.diagnostic.goto_next()<CR>
-keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, { desc = 'Go to [N]ext diagnostic' })
-keymap.set('n', '<Leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to [P]revious diagnostic' })
+keymap.set('n', '<Leader>dn', function()
+  vim.diagnostic.jump { count = 1, float = true }
+end, { desc = 'Go to [N]ext diagnostic' })
+keymap.set('n', '<Leader>dp', function()
+  vim.diagnostic.jump { count = -1, float = true }
+end, { desc = 'Go to [P]revious diagnostic' })
 keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 keymap.set('n', '<leader>dt', function()
