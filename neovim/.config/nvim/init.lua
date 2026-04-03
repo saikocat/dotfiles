@@ -17,5 +17,8 @@ require 'lazy_bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy_plugins'
 
+-- Built-in packages require version >= 0.12
+vim.cmd.packadd 'nvim.undotree'
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

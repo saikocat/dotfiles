@@ -78,6 +78,6 @@ return {
     }),
 
     -- Toggle
-    vim.keymap.set('n', '<leader>uf', ':FormatToggle<CR>', { desc = 'Toggle format on Save' }),
+    vim.keymap.set('n', '<leader>zf', ':FormatToggle<CR>', { desc = 'Toggle format on Save' }),
   },
 }

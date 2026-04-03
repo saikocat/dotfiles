@@ -71,3 +71,10 @@ keymap.set('n', '<leader>v', '"*p', { desc = 'Paste from middle mouse', noremap 
 keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = '[B]uffer [N]ext' })
 keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = '[B]uffer [P]revious' })
 keymap.set('n', '<leader>bl', ':buffers<CR>', { desc = '[B]uffer [L]ist' })
+
+-- Built-in undotree (Neovim 0.12 opt package)
+keymap.set('n', '<leader>u', function()
+  require('undotree').open {
+    command = math.floor(vim.api.nvim_win_get_width(0) / 3) .. 'vnew',
+  }
+end, { desc = '[U]ndotree toggle' })
