@@ -72,6 +72,12 @@ keymap.set('n', '<leader>bn', ':bnext<CR>', { desc = '[B]uffer [N]ext' })
 keymap.set('n', '<leader>bp', ':bprevious<CR>', { desc = '[B]uffer [P]revious' })
 keymap.set('n', '<leader>bl', ':buffers<CR>', { desc = '[B]uffer [L]ist' })
 
+-- vim.pack helpers
+vim.api.nvim_create_user_command('PackUpdate', function()
+  vim.pack.update()
+end, { desc = 'Update vim.pack managed plugins' })
+keymap.set('n', '<leader>pu', '<cmd>PackUpdate<CR>', { desc = '[P]ack [U]pdate' })
+
 -- Built-in undotree (Neovim 0.12 opt package)
 keymap.set('n', '<leader>u', function()
   require('undotree').open {

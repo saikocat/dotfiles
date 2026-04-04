@@ -1,3 +1,0 @@
-return {
-  { 'sickill/vim-monokai' },
-}
