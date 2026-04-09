@@ -21,7 +21,7 @@ return {
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects', version = 'main' },
 
   -- Completion
-  { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('*') },
+  { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range '*' },
   'https://github.com/rafamadriz/friendly-snippets',
   'https://github.com/folke/lazydev.nvim',
 
@@ -29,6 +29,8 @@ return {
   'https://github.com/nvim-telescope/telescope.nvim',
   'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
   'https://github.com/nvim-telescope/telescope-ui-select.nvim',
+  'https://github.com/BurntSushi/ripgrep',
+  'https://github.com/sharkdp/fd',
   'https://github.com/nvim-neo-tree/neo-tree.nvim',
 
   -- Code
