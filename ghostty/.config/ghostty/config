@@ -11,5 +11,14 @@ font-thicken = true
 
 clipboard-trim-trailing-spaces = true
 
-# MacOS ONLY
-config-file = ?~/.config/ghostty/config_macos
+# https://catskull.net/fun-with-ghostty-shaders.html
+# custom-shader = ./shaders/cursor_blaze.glsl
+
+# Include other configuration files
+# Processing Order: The config-file keys are processed at the very END of the file.
+# This means that even if you place config-file at the top of the main file,
+# any overlapping settings inside the included files will overwrite the settings
+# in the main config file.
+config-file = ?keybinds.conf
+config-file = ?macos-specific.conf
+config-file = ?nix.conf
