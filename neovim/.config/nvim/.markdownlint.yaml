@@ -1,4 +1,22 @@
 default: true
 
-# Line length
+# Unordered list indentation
+MD007:
+  indent: 2
+
+# Allow long lines and use soft wrapping instead
 MD013: false
+
+# Allow duplicate headings under different parent headings
+MD024:
+  siblings_only: true
+
+# Allow inline HTML for advanced Markdown formatting
+MD033: false
+
+# Allow standalone documents without a top-level heading
+MD041: false
+
+# Prefer fenced code blocks
+MD046:
+  style: fenced
